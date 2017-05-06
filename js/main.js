@@ -1,6 +1,6 @@
 //SLIDER
 $('.tp-banner').revolution({
-    delay: 9000,
+    delay: 4000,
     startheight: 616,
     navigationVAlign: "center",
     soloArrowLeftHOffset: 100,
@@ -11,15 +11,6 @@ $('.tp-banner').revolution({
     hideArrowsOnMobile: "off",
     hideThumbs: 0
 }); // Main Slider
-
-$('.fullscreen').revolution({
-    delay: 9000,
-    startheight: 616,
-    navigationVAlign: "center",
-    hideTimerBar: "on",
-    fullScreen: "on",
-    hideThumbs: 0
-}); // Fullscreen Slider
 
 var tb_container = $('.tp-banner-container');
 
