@@ -1,25 +1,36 @@
+//SLIDER
+$('.tp-banner').revolution({
+    delay: 9000,
+    startheight: 616,
+    navigationVAlign: "center",
+    soloArrowLeftHOffset: 100,
+    soloArrowLeftVOffset: 10,
+    soloArrowRightHOffset: 100,
+    soloArrowRightVOffset: 10,
+    hideTimerBar: "on",
+    hideArrowsOnMobile: "off",
+    hideThumbs: 0
+}); // Main Slider
 
-//SLIDESHOW
+$('.fullscreen').revolution({
+    delay: 9000,
+    startheight: 616,
+    navigationVAlign: "center",
+    hideTimerBar: "on",
+    fullScreen: "on",
+    hideThumbs: 0
+}); // Fullscreen Slider
+
+var tb_container = $('.tp-banner-container');
+
+$('.main-navigation').find('.courses-menu').hover(function () {
+    tb_container.addClass('slider-overlay');
+}, function () {
+    tb_container.removeClass('slider-overlay');
+});
 $(function () {
     'use strict';
-    $(".animsition").animsition({
-        inClass: 'fade-in',
-        outClass: 'fade-out',
-        inDuration: 800,
-        outDuration: 500,
-        // linkElement           :   '.animsition-link',
-        linkElement: 'a:not([target="_blank"]):not([href^=#]):not([data-rel*="lightcase"]):not([class*="no-redirect"])',
-        loading: true,
-        loadingParentElement: 'body', //animsition wrapper element
-        loadingClass: 'animsition-loading',
-        unSupportCss: ['animation-duration',
-            '-webkit-animation-duration',
-            '-o-animation-duration'
-        ],
-        overlay: false,
-        overlayClass: 'animsition-overlay-slide',
-        overlayParentElement: 'body'
-    });
+   
     var swipermw = $('.swiper-container.mousewheel').length ? true : false;
     var swiperkb = $('.swiper-container.keyboard').length ? true : false;
     var swipercentered = $('.swiper-container.center').length ? true : false;
@@ -378,6 +389,7 @@ $(function () {
         Intense(intenseImages);
 
 });
+
 
 //WOW ANIMATION
 new WOW({
